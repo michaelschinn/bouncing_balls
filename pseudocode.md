@@ -27,6 +27,11 @@ Generate balls in the `<canvas>` element, with quasi-random proprties, that will
         - velY | INTEGER | The velocity of the ball on its y trajectory.
         - color | STRING | The color off the ball. This can be an RGB or HEX value
         - size | INTEGER | The the radius of the ball.
+4. Define out the parameters for drawing the ball on the canvas.
+    - Begin drawing the path that will be the ball.
+    - Assign it's color
+    - Create the outer arc of the ball.
+    - Fill the arc with the assigned color.
 
 ## Initialization
 
