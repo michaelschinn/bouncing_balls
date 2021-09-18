@@ -19,15 +19,15 @@ Generate balls in the `<canvas>` element, with quasi-random proprties, that will
         - max | INTEGER | The highest Number in the range
     - Output
         - num | INERGER | (random number) x (max - min + 1) + min, rounded down.
-3. Create the Ball object and assign it's properties
-    - Input
+3. Create a base Ball object and define it's properties
+    - Properties
         - x | INTEGER | The x position of the ball on the canvas.
         - y | INTEGER | The y position of the ball on the canvas.
         - velX | INTEGER | The velocity of the ball on its x trajectory.
         - velY | INTEGER | The velocity of the ball on its y trajectory.
-        - color | STRING | The color off the ball. This can be an RGB or HEX value
+        - color | STRING | The color off the ball. This can be a RGB, RGBA or HEX value.
         - size | INTEGER | The the radius of the ball.
-4. Define out the parameters for drawing the ball on the canvas.
+4. Define the parameters for drawing the ball on the canvas.
     - Begin drawing the path that will be the ball.
     - Assign it's color
     - Create the outer arc of the ball.
