@@ -13,11 +13,16 @@ function random(min,max){
     return num;
 }
 
-function Ball(x, y, velX, velY, color, size){
+function Shape(x, y, velX, velY, exists){
     this.x = x;
     this.y = y;
     this.velX = velX;
     this.velY = velY;
+    this.exists = exists;
+}
+
+function Ball(x, y, velX, velY, exists, color, size){
+    Shape.call(this, x, y, velX, velY, exists);
     this.color = color;
     this.size = size;
 }
@@ -48,7 +53,7 @@ Ball.prototype.update = function(){
 
 Ball.prototype.collisionDetection = function(){
     for (let j = 0; j < balls.length; j++){
-        if(!(this === balls[j])){
+        if(!(this === balls[j]) && balls[j].exists){
             const dx = this.x - balls[j].x,
             dy = this.y - balls[j].y,
             distance = Math.sqrt(dx * dx + dy * dy);
@@ -68,6 +73,7 @@ while (balls.length < 10){
         random(0 + size, height - size),
         random(-7,7),
         random(-7,7),
+        true,
         'rgb(' + random(0,255) + ',' + random(0,255) + ',' + random(0,255) + ')',
         size
     )
@@ -79,7 +85,7 @@ function loop(){
     ctx.fillStyle = 'rgba(0,0,0,0.25)';
     ctx.fillRect(0,0,width,height);
 
-    for (let i = 0; i<balls.length; i++){
+    for (let i = 0; i < balls.length; i++){
         balls[i].draw();
         balls[i].update();
         balls[i].collisionDetection();
