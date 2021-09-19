@@ -1,6 +1,6 @@
 | Author | Date | Description |
 |---|---|---|
-| Michael Chinn | 9/18/2021 | Pseudo code for the bouncing balls project |
+| Michael Chinn | 9/18/2021 | Pseudo code for the bouncing balls project. |
 
 # Pseudo Code - Bouncing Balls
 
